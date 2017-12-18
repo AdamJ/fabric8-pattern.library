@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mindreeper2420/fabric8-pattern.library/issues"
   },
-  "homepage": "https://github.com/mindreeper2420/fabric8-pattern.library#readme"
+  "homepage": "https://github.com/mindreeper2420/fabric8-pattern.library#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
