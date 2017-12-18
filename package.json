@@ -1,6 +1,6 @@
 {
   "name": "fabric8-pattern.library",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A pattern library for the fabric8 project.",
   "main": "index.js",
   "scripts": {
