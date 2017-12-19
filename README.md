@@ -15,6 +15,8 @@ A pattern library for the fabric8 project.
 * [Bootstrap v3](https://github.com/twbs/bootstrap/tree/master)
 * [Font Awesome v4](https://github.com/FortAwesome/Font-Awesome)
 
+Each of these modules is imported into the `fabric8.less` file and included in the compiled `fabric8.css` file.
+
 ## Module Structure
 ```
 styles/
@@ -25,6 +27,25 @@ styles/
       bootstrap/
         less/
           bootstrap.less
+      bootstrap-datepicker/
+        less/
+          datepicker3.less
+      bootstrap-select/
+        src/
+          less/
+            bootstrap-slider.less
+      bootstrap-slider/
+        src/
+          less/
+            bootstrap-slider.less
+      bootstrap-switch/
+        src/
+          less/
+            bootstrap3/
+              bootstrap-switch.less
+      patternfly-bootstrap-combobox/
+        less/
+          combobox.less
       font-awesome/
         less/
           font-awesome.less
