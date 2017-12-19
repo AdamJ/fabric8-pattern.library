@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mindreeper2420/fabric8-pattern.library.git"
+    "url": "git+https://github.com/mindreeper2420/fabric8-pattern.library.git"
   },
   "author": "Adam J. Jolicoeur'",
   "license": "Apache-2.0",
