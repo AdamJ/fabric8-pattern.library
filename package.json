@@ -1,14 +1,15 @@
 {
   "name": "fabric8-pattern.library",
-  "version": "1.4.0",
+  "version": "0.0.0-development",
   "description": "A pattern library for the fabric8 project.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mindreeper2420/fabric8-pattern.library.git"
+    "url": "https://github.com/mindreeper2420/fabric8-pattern.library.git"
   },
   "author": "Adam J. Jolicoeur'",
   "license": "Apache-2.0",
@@ -24,6 +25,10 @@
     "path": "^0.12.7",
     "patternfly": "^3.32.1",
     "bootstrap": "^3.3.7",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "semantic-release": "^8.2.0"
+  },
+  "dependencies": {
+    "semantic-release": "^8.2.0"
   }
 }
