@@ -27,8 +27,5 @@
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
     "semantic-release": "^8.2.0"
-  },
-  "dependencies": {
-    "semantic-release": "^8.2.0"
   }
 }
