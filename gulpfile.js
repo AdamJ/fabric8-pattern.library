@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
 var minifyCSS = require('gulp-csso');
+var rename = require("gulp-rename");
 var plumber = require('gulp-plumber');
 var path = require('path');
 var browserSync = require('browser-sync').create();
@@ -51,9 +52,13 @@ gulp.task('less', function () {
   gulp.src('styles/less/fabric8.less')
     .pipe(plumber())
     .pipe(less({
-        paths: [ path.join('node_modules'), path.join('styles/dependencies/patternfly/'), path.join('styles/dependencies/bootstrap/less'), path.join('styles/dependencies/font-awesome/less')],
+        paths: [ path.join('node_modules'),
+                 path.join('styles/dependencies/patternfly/'),
+                 path.join('styles/dependencies/patternfly/bootstrap/less'),
+                 path.join('styles/dependencies/patternfly/font-awesome/less')],
     }))
     .pipe(minifyCSS())
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('styles/css'))
 });
 
