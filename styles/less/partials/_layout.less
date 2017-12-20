@@ -1,17 +1,18 @@
 body {
-  background-color: @color-pf-black-200;
+  /* stylelint-disable */
+  /* overwrite white background */
+  background-color: @color-pf-black-200 !important;
+  /* stylelint-enable*/
   position: relative;
   min-height: 100vh;
-  margin: 0;
   /* stylelint-disable */
   /* for use with the fixed masthead */
   padding-top: 45px !important;
   /* stylelint-enable */
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
   /* stylelint-disable */
   /* required to overwrite the default PatternFly font size */
-  font-size: @font-size-base !important;
+  font-size:  @font-size-base !important; // 14px
   /* stylelint-enable */
 }
 .fill-container {
@@ -56,4 +57,14 @@ body {
 @media (max-width: (@grid-float-breakpoint - 1)) {
   .containerPadd { padding-top: em(11); }
   .containerPadd-nologin { padding-bottom: 0; }
+}
+.vert-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  @media (min-width: 768px) and (max-width: 1200px) {
+    top: 0;
+    transform: none;
+  }
+  @media (max-width: 768px) { transform: none; }
 }

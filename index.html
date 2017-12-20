@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>fabric8-pattern.library</title>
+    <link rel="stylesheet" href="styles/css/patternfly.css">
+    <link rel="stylesheet" href="styles/css/patternfly-additions.css">
+    <link rel="stylesheet" href="styles/css/fabric8.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-inverse navbar-pf navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="context dropdown recent-items-dropdown">
+              <a class="recent-items-toggle io-recent-items-active dropdown-toggle" data-toggle="tooltip" title="{{context.name}}">
+                <div id="header_dropdownToggle" class="recent-items-toggle-text">
+                <span class="nav-item-icon">
+                  <span class=""></span>
+                </span>
+                  <span>{{context.name}}</span>
+                  <span class="nav-item-icon">
+                  <span class="caret"></span>
+                </span>
+                </div>
+              </a>
+              <!-- current Space and recent items dropdown -->
+              <ul class="dropdown-menu recent-items">
+                <li class="recent-items-toggle">
+                  <a class="recent-items-text-dropdown" data-toggle="tooltip" title="{{m.name}}">
+                  <span class="nav-item-icon">
+                    <span class=""></span>
+                  </span>
+                    <span>{{m.name}}</span>
+                  </a>
+                  <a href="#">
+                    <span class="nav-item-icon">
+                      <span class=""></span>
+                    </span>
+                    <span>{{m.name}}</span>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li id="header_createSpace">
+                  <a href="#">
+                  <span class="nav-item-icon">
+                    <i class="pficon pficon-add-circle-o"></i>
+                  </span>
+                    Create space
+                  </a>
+                </li>
+                <li id="header_mySpaces">
+                  <a href="#">
+                    <span class="nav-item-icon">
+                      <i class="pficon pficon-user"></i>
+                    </span>
+                    My spaces
+                  </a>
+                </li>
+                <li id="header_viewAllSpaces">
+                  <a href="#">
+                  <span class="nav-item-icon">
+                    <i class="fa fa-th"></i>
+                  </span>
+                    View all spaces
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li id="header_accountHome">
+                  <a href="#">
+                  <span class="nav-item-icon">
+                    <i class="pficon pficon-home"></i>
+                  </span>
+                    Account home
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <!-- user profile dropdown -->
+          <ul id="header_rightDropdown" class="nav navbar-nav navbar-right">
+            <li id="header_status" dropdown class="dropdown status-dropdown" placement="top" tooltip="Status: Ok">
+              <a href="#" class="dropdown-toggle">
+                <span class="pficon pficon-ok pficon-white"></span>
+              </a>
+              <div class="dropdown-menu infotip bottom-right">
+                <div class="arrow"></div>
+                <ul class="list-group">
+                  <fabric8-status-list></fabric8-status-list>
+                </ul>
+              </div>
+            </li>
+            <li class="login-block">
+              <a href="#">
+              <span class="login-block-logged-out-user">
+                <i id="header_login" class="pficon pficon-user"></i>
+              </span>
+                Log In
+              </a>
+            </li>
+            <li dropdown class="pull-right dropdown user-dropdown-menu">
+              <a class="user-dropdown dropdown-toggle" title="{{loggedInUser.attributes.fullName}}">
+                <div id="header_dropdownToggle2" class="user-dropdown-items">
+                <span class="user-dropdown__user-icon">
+                  <span class="pficon pficon-user"></span>
+                  <img class="icon-user">
+                </span>
+                <span class="user-dropdown__username">{{loggedInUser.attributes.fullName}}</span>
+                <span class="caret"></span>
+              </div>
+              </a>
+              <ul class="dropdown-menu">
+                <li id="header_loggedinProfile">
+                  <a href="#">
+                    Profile
+                  </a>
+                </li>
+                <li id="header_loggedinAbout">
+                  <a href="#" class="pointer">
+                    About
+                  </a>
+                </li>
+                <li id="header_loggedinChat">
+                  <a href="https://chat.openshift.io/developers/channels/town-square" target="top" class="pointer">
+                    Chat
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li id="header_loggedinHelp">
+                  <a href="https://docs.openshift.io" target="top" class="pointer">
+                    Documentation
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li id="header_logout">
+                  <a href="#" class="pointer">
+                    Log Out
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <!-- secondary navigation for all sub-links -->
+          <ul class="nav navbar-nav navbar-primary persistent-secondary">
+            <li>
+              <a>
+                <span class="nav-item-icon">
+                  <span></span>
+                </span>
+                <span></span>
+              </a>
+              <ul class="nav navbar-nav navbar-persistent">
+                <li>
+                  <a>
+                  <span>
+                    
+                  </span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div> <!-- .navbar-collapse -->
+      </div> <!-- /.container-fluid -->
+    </nav>
+    <div class="container-fluid container-cards-pf home-wrapper">
+      <div class="row row-cards-pf">
+        <div class="col-sm-12">
+          <section class="card-pf card-pf-view home-banner">
+            <aside class="col-sm-12 col-lg-3 vert-center">
+              <div class="card-pf-body text-center">
+                <div class="col-sm-12">
+                  <img [src]="brandInformation.logo" class="home-logo"/>
+                </div>
+                <div class="col-sm-12 margin-top-15">
+                  <p class="card-pf-info home-banner-title">OpenShift.io</p>
+                </div>
+              </div>
+            </aside>
+            <aside class="col-sm-12 col-lg-9 vert-center">
+              <div class="col-sm-4 col-lg-4">
+                <div class="card-pf-body text-center">
+                  <div class="card-pf-top-element">
+                    <span class="fa fa-search card-pf-icon-circle home-icon"></span>
+                  </div>
+                  <h2 class="card-pf-title home-title">
+                    OpenShift.io information
+                  </h2>
+                  <p class="card-pf-info">
+                    <a [href="#" class="home-banner-link" target="_blank">Learn more</a>
+                    about what OpenShift.io can do for you.
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-4 col-lg-4">
+                <div class="card-pf-body text-center">
+                  <div class="card-pf-top-element">
+                    <span class="pficon pficon-user card-pf-icon-circle home-icon"></span>
+                  </div>
+                  <h2 class="card-pf-title home-title">
+                    Setup your profile
+                  </h2>
+                  <p class="card-pf-info">Let others know who you are by filling out
+                    <a href="#" class="home-banner-link">your profile</a>.
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-4 col-lg-4">
+                <div class="card-pf-body text-center">
+                  <div class="card-pf-top-element">
+                    <span class="pficon pficon-cluster card-pf-icon-circle home-icon"></span>
+                  </div>
+                  <h2 class="card-pf-title home-title">
+                    Learn about OpenShift
+                  </h2>
+                  <p class="card-pf-info">See how
+                    <a href="https://www.openshift.com/container-platform" class="home-banner-link" target="_blank">containerized development and deployment</a> can help you.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </section>
+        </div>
+      </div>
+      <div class="cards-pf">
+        <div class="row row-cards-pf">
+          <div class="col-xs-12 col-md-4">
+            <div class="card-pf f8-card">
+              <div class="card-pf-heading f8-card-heading">
+                <div class="card-pf-heading-details f8-card-heading-details">
+                  <a class="btn btn-link f8-card-heading-btn-link">
+                    <i class="pficon pficon-add-circle-o"></i>
+                  </a>
+                </div>
+                <h2 class="card-pf-title">
+                  Recent Spaces
+                </h2>
+              </div>
+              <div class="card-pf-body f8-card-body">
+                <div class="f8-blank-slate-card">
+                  <div class="f8-blank-slate-icon">
+                    <span class="pficon pficon-add-circle-o"></span>
+                  </div>
+                  <h3>Create a space</h3>
+                  <p>Learn how to get started
+                    <a href="https://docs.openshift.io" target="top">
+                      in the documentation.
+                    </a>
+                  </p>
+                  <div class="blank-slate-pf-main-action">
+                    <button class="btn btn-primary btn-lg"> Create a Space </button>
+                  </div>
+                </div>
+                <div class="home-space-list-result">
+                  <ul class="list-group list-view-pf list-view-pf-view list-view-pf-striped">
+                    <li class="list-group-item">
+                      <div class="list-view-pf-main-info">
+                        <div class="list-view-pf-body">
+                          <div class="list-view-pf-description">
+                            <div class="list-group-item-text">
+                              <a href="#">
+                                Space Name
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -3,69 +3,8 @@
  */
 
 // PatternFly
-@import '../dependencies/patternfly/patternfly.less';
-// PatternFly additions to Bootstrap
-// Bootstrap variables and mixins
-@import '../dependencies/patternfly/bootstrap/less/variables.less';
-@import '../dependencies/patternfly/bootstrap/less/mixins.less';
-// Font Awesome variables
-@import '../dependencies/patternfly/font-awesome/less/variables.less';
-
-// Bootstrap-Slider
-@import '../dependencies/patternfly/bootstrap-slider/src/less/variables.less';
-@import '../dependencies/patternfly/bootstrap-slider/src/less/rules.less';
-
-// Bootstrap-Datepicker
-@import '../dependencies/patternfly/bootstrap-datepicker/less/datepicker3.less';
-// Bootstrap-Select
-@import '../dependencies/patternfly/bootstrap-select/less/bootstrap-select.less';
-// Bootstrap Switch
-@import '../dependencies/patternfly/bootstrap-switch/src/less/bootstrap3/bootstrap-switch.less';
-
-@import '../dependencies/patternfly/variables.less';
-@import '../dependencies/patternfly/bootstrap-mixin-overrides.less';
-@import '../dependencies/patternfly/mixins.less';
-@import '../dependencies/patternfly/about-modal.less';
-@import '../dependencies/patternfly/application-launcher.less';
-@import '../dependencies/patternfly/blank-slate.less';
-@import '../dependencies/patternfly/bootstrap-combobox.less';
-@import '../dependencies/patternfly/bootstrap-datepicker.less';
-@import '../dependencies/patternfly/bootstrap-select.less';
-@import '../dependencies/patternfly/bootstrap-slider.less';
-@import '../dependencies/patternfly/bootstrap-switch.less';
-@import '../dependencies/patternfly/bootstrap-touchspin.less';
-@import '../dependencies/patternfly/bootstrap-treeview.less';
-@import '../dependencies/patternfly/cards.less';
-@import '../dependencies/patternfly/card-view.less';
-@import '../dependencies/patternfly/charts.less';
-@import '../dependencies/patternfly/close.less';
-@import '../dependencies/patternfly/datatables.less';
-@import '../dependencies/patternfly/experimental-features.less';
-@import '../dependencies/patternfly/footer.less';
-@import '../dependencies/patternfly/icons.less';
-@import '../dependencies/patternfly/infotip.less';
-@import '../dependencies/patternfly/layouts.less';
-@import '../dependencies/patternfly/links.less';
-@import '../dependencies/patternfly/list-pf.less';
-@import '../dependencies/patternfly/list-view.less';
-@import '../dependencies/patternfly/list-view-dnd.less';
-@import '../dependencies/patternfly/login.less';
-@import '../dependencies/patternfly/navbar.less';
-@import '../dependencies/patternfly/navbar-alt.less';
-@import '../dependencies/patternfly/navbar-vertical.less';
-@import '../dependencies/patternfly/nav-vertical-alt.less';
-@import '../dependencies/patternfly/notifications-drawer.less';
-@import '../dependencies/patternfly/search.less';
-@import '../dependencies/patternfly/sidebar.less';
-@import '../dependencies/patternfly/skip-to-content.less';
-@import '../dependencies/patternfly/spinner.less';
-@import '../dependencies/patternfly/syntax-highlighting.less';
-@import '../dependencies/patternfly/table-view.less';
-@import '../dependencies/patternfly/time-picker.less';
-@import '../dependencies/patternfly/toast.less';
-@import '../dependencies/patternfly/toolbar.less';
-@import '../dependencies/patternfly/vertical-nav.less';
-@import '../dependencies/patternfly/wizard.less';
+@import (reference) '../dependencies/patternfly/patternfly.less';
+@import (reference) '../dependencies/patternfly/patternfly-additions.less';
 
 // margin and padding formulas
 @import 'partials/_formulas.less';
@@ -73,6 +12,15 @@
 // site variables and PatternFly overrides
 @import 'partials/_utilities.less';
 @import 'partials/_variables.less';
+
+// Overrides of PatternFly
+@import 'partials/_overrides.less';
+
+// New typography settings
+@import 'partials/_typography.less';
+
+// General layout information
+@import 'partials/_layout.less';
 
 // OSIO custom mixins
 @import 'partials/_mixins.less';
@@ -84,12 +32,4 @@
 @import 'partials/_experimental.less';
 @import 'partials/_forms.less';
 @import 'partials/_icons.less';
-
-// Overrides of PatternFly
-@import 'partials/_overrides.less';
-
-// New typography settings
-@import 'partials/_typography.less';
-
-// General layout information
-@import 'partials/_layout.less';
+@import 'partials/_banners.less';
