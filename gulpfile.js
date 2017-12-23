@@ -90,4 +90,4 @@ gulp.task('watch', ['copy', 'less', 'dependencies'], function () {
   browserSync.reload();
  });
 
-gulp.task('default', ['copy', 'less']);
+gulp.task('default', ['build']);
