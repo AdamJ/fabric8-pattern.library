@@ -1,12 +1,13 @@
 // -- Cards --
 .cards-pf { background-color: @color-pf-black-200; }
-.f8 {
+.f8 {// -- Cards --
   &-card {
     height: 440px;
     &__activity {
       max-height: 300px;
     }
     &-body {
+      max-height: 375px;
       margin-top: 0;
       padding-bottom: 0;
       overflow-x: hidden;
@@ -25,7 +26,7 @@
         &-kebab {
           display: inline-flex;
           /* stylelint-disable */
-            // overwrite default button link style for kebab items 
+          /* overwrite default button link style for kebab items */
           color: @color-pf-black !important;
           /* stylelint-enable */
           &:hover {
