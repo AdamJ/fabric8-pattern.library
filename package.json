@@ -4,6 +4,8 @@
   "description": "A pattern library for the fabric8 project.",
   "main": "index.js",
   "scripts": {
+    "clean": "gulp clean && npm install",
+    "watch:library": "gulp watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -18,16 +20,19 @@
   },
   "homepage": "https://github.com/mindreeper2420/fabric8-pattern.library#readme",
   "devDependencies": {
-    "bootstrap": "^3.3.7",
-    "browser-sync": "^2.19.0",
-    "font-awesome": "^4.7.0",
-    "gulp": "^3.9.1",
-    "gulp-csso": "^3.0.0",
-    "gulp-less": "^3.3.2",
-    "gulp-plumber": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "path": "^0.12.7",
-    "patternfly": "^3.32.1",
-    "semantic-release": "^8.2.0"
+    "bootstrap": "3.3.7",
+    "browser-sync": "2.19.0",
+    "del": "3.0.0",
+    "rimraf": "2.6.2",
+    "font-awesome": "4.7.0",
+    "gulp": "3.9.1",
+    "gulp-csso": "3.0.0",
+    "gulp-less": "3.3.2",
+    "gulp-plumber": "1.1.0",
+    "gulp-rename": "1.2.2",
+    "gulp-util": "3.0.8",
+    "path": "0.12.7",
+    "patternfly": "3.37.0",
+    "semantic-release": "8.2.0"
   }
 }
