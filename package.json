@@ -21,7 +21,7 @@
   "homepage": "https://github.com/mindreeper2420/fabric8-pattern.library#readme",
   "devDependencies": {
     "bootstrap": "3.3.7",
-    "browser-sync": "2.19.0",
+    "browser-sync": "2.29.1",
     "del": "3.0.0",
     "rimraf": "2.6.2",
     "font-awesome": "4.7.0",
