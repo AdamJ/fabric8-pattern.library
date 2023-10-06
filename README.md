@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/mindreeper2420/fabric8-pattern.library.svg?branch=master)](https://travis-ci.org/mindreeper2420/fabric8-pattern.library)
+[![Build Status](https://travis-ci.org/mindreeper2420/fabric8-pattern.library.svg?branch=master)](https://travis-ci.org/AdamJ/fabric8-pattern.library)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![GitHub version](https://badge.fury.io/gh/mindreeper2420%2Ffabric8-pattern.library.svg)](https://badge.fury.io/gh/mindreeper2420%2Ffabric8-pattern.library)
+[![GitHub version](https://badge.fury.io/gh/AdamJ%2Ffabric8-pattern.library.svg)](https://badge.fury.io/gh/AdamJ%2Ffabric8-pattern.library)
 
 # fabric8-pattern.library
 A pattern library for the [fabric8 UI](https://github.com/fabric8-ui/fabric8-ui) project.
@@ -87,4 +87,4 @@ gulp.task('less', function () {
     - [gulp-plumber](https://www.npmjs.com/package/gulp-plumber)
 
 ## Question?
-If you have any questions or issues with this module, please file and issue on our [GitHub page](https://github.com/mindreeper2420/fabric8-pattern.library/issues).
+If you have any questions or issues with this module, please file and issue on our [GitHub page](https://github.com/AdamJ/fabric8-pattern.library/issues).
